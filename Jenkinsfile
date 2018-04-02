@@ -3,12 +3,12 @@ pipeline {
 	stages {
 		stage('代码质量扫描') {
             steps {
-                build '2.DTjob-mvn-Package_todo_SonarScanner'
+                build '0.min-Step_Compile'
             }
         }
         stage('编译、打包、归档') {
             steps {
-                build '3.DTjob-mvn_Build-Tigger-STEP4'
+                build '0.AdminUI_Test2_package'
             }
         }
 	}

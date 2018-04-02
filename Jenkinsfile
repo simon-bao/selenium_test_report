@@ -1,6 +1,6 @@
 pipeline {
-  node('master'){
-	  stages {
+	agent any
+	stages {
 		stage('test') {
 		  steps {
 			echo 'hello world'
@@ -8,5 +8,4 @@ pipeline {
 		  }
 		}
 	}
-  }
 }

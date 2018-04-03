@@ -1,14 +1,19 @@
 pipeline {
 	agent none
 	stages {
-		stage('代码质量扫描') {
+		stage('编译打包') {
             steps {
-                build '0.min-Step_Compile'
+                build '0-min-Step-UserUI-Package'
             }
         }
-        stage('编译、打包、归档') {
+        stage('部署到SVN') {
             steps {
-                build '0.AdminUI_V1.0_Test2_package'
+                build '0.min-Step_DeployTo_Tomcat'
+            }
+        }
+		stage('Web测试') {
+            steps {
+                build 'test-selenium-in-win-Agent'
             }
         }
 	}

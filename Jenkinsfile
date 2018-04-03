@@ -8,7 +8,7 @@ pipeline {
         }
         stage('编译、打包、归档') {
             steps {
-                build '0.AdminUI_Test2_package'
+                build '0.AdminUI_V1.0_Test2_package'
             }
         }
 	}

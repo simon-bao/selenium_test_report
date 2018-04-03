@@ -1,5 +1,5 @@
 pipeline {
-	agent any
+	agent none
 	stages {
 		stage('代码质量扫描') {
             steps {
